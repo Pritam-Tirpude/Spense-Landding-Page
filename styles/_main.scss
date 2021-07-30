@@ -1,0 +1,118 @@
+.social-network {
+  @include flex(space-between, center, row);
+  padding: 2rem 10rem;
+
+  img {
+    width: 100px;
+    object-fit: cover;
+  }
+}
+
+.money-section {
+  margin: 2rem 0 2rem 0;
+  padding: 0 10rem;
+
+  .money-container {
+    background: $bg-color url("../Assets/Phone-Mockup.png") no-repeat right;
+    background-size: cover;
+    border-radius: 1rem;
+    height: 80vh;
+    @include flex(flex-start, center, row);
+    padding: 0rem 5rem;
+
+    .money-text {
+      h3 {
+        font-size: 4rem;
+        color: $title-color;
+      }
+      p {
+        color: $text-color;
+        padding: 1rem 0;
+      }
+      a {
+        color: $text-bold-color;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.text-editor-section {
+  @include flex(center, center, row);
+  padding: 2rem 10rem;
+
+  .editor-img {
+    flex: 1 0 50%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .editor-content {
+    flex: 1 0 50%;
+
+    h3 {
+      font-size: 4rem;
+      color: $title-color;
+    }
+    p {
+      color: $text-color;
+      padding: 1rem 0;
+    }
+    a {
+      color: $text-bold-color;
+      font-weight: bold;
+    }
+  }
+}
+
+.footer-container {
+  @include flex(space-around, center, row);
+  background-color: $black-color;
+  padding: 5rem 10rem;
+
+  .footer-logo {
+    h4 {
+      color: $white-color;
+    }
+    p {
+      color: $white-color;
+      padding-top: 1rem;
+      color: hsl(0, 0%, 58%);
+    }
+  }
+  .footer-links {
+    @include flex(space-between, center, row);
+    width: 50%;
+
+    strong {
+      color: $white-color;
+    }
+
+    ul {
+      list-style-type: none;
+
+      li {
+        margin: 1rem 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: hsl(0, 0%, 58%);
+        transition: 0.4s ease;
+
+        &:hover {
+          color: hsl(0, 0%, 25%);
+        }
+      }
+    }
+
+    .sitemap {
+      align-self: baseline;
+    }
+
+    .opportunities {
+      align-self: baseline;
+    }
+  }
+}

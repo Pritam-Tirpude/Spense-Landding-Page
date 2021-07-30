@@ -1,0 +1,165 @@
+header {
+  background-color: $bg-color;
+}
+.spense-launh-header {
+  background-color: $black-color;
+  color: $white-color;
+  padding: 1rem;
+  @include flex(center, center, row);
+
+  span {
+    display: inline-block;
+    flex-wrap: wrap;
+    a {
+      color: $white-color;
+    }
+  }
+}
+
+nav {
+  @include flex(space-between, center, row);
+  padding: 2rem 10rem;
+
+  .logo {
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+
+  ul {
+    @include flex(space-between, center, row);
+    list-style-type: none;
+    position: relative;
+
+    li {
+      margin: 0 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: $black-color;
+      transition: 0.4s ease;
+
+      &:hover {
+        color: hsl(0, 0%, 55%);
+      }
+    }
+  }
+
+  .login-btn {
+    a {
+      text-decoration: none;
+      color: $black-color;
+      transition: 0.4s ease;
+
+      &:hover {
+        color: hsl(0, 0%, 55%);
+      }
+    }
+
+    .get-started-btn {
+      border: none;
+      background-color: $black-color;
+      border-radius: 0.5rem;
+      color: $white-color;
+      font-family: inherit;
+      font-size: 1.8rem;
+      font-weight: bold;
+      padding: 1.5rem 1.8rem;
+      margin-left: 1rem;
+      cursor: pointer;
+      transition: background 0.4s ease;
+
+      &:hover {
+        background-color: $white-color;
+        color: $black-color;
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+}
+
+.intro-header {
+  @include flex(center, center, row);
+  padding: 2rem 10rem;
+
+  .intro-text {
+    flex: 1 0 60%;
+
+    h2 {
+      font-size: 5rem;
+      color: $title-color;
+    }
+
+    p {
+      color: $text-color;
+      padding: 1rem 0;
+    }
+
+    .spense-feature-text {
+      ul {
+        list-style-type: none;
+
+        li {
+          display: flex;
+          align-items: center;
+          margin: 1rem 0;
+          color: $text-bold-color;
+          font-weight: bold;
+          img {
+            margin: 0 1rem 0 0;
+          }
+        }
+      }
+    }
+
+    .connect {
+      padding-top: 1rem;
+      input[type="email"] {
+        border: 1px solid $text-color;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        font-family: inherit;
+        font-size: 1.8rem;
+        color: $text-color;
+
+        &:focus {
+          outline: 0;
+        }
+      }
+
+      .connect-btn {
+        border: none;
+        background-color: $black-color;
+        border-radius: 0.5rem;
+        color: $white-color;
+        font-family: inherit;
+        font-size: 1.8rem;
+        font-weight: bold;
+        padding: 2rem 1.8rem;
+        margin-left: 1rem;
+        cursor: pointer;
+        transition: background 0.4s ease;
+
+        &:hover {
+          background-color: $white-color;
+          color: $black-color;
+        }
+      }
+    }
+  }
+
+  .intro-img {
+    flex: 1 0 40%;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

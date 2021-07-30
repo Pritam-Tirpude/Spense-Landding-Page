@@ -1,0 +1,183 @@
+@import "global";
+@import "header";
+@import "main";
+
+@media screen and (max-width: 768px) {
+  .spense-launh-header {
+    text-align: center;
+  }
+
+  nav {
+    padding: 2rem 2rem;
+    ul {
+      position: absolute;
+      top: 18vh;
+      width: 90%;
+      height: 30vh;
+      @include flex(space-evenly, center, column);
+      background: $white-color;
+      text-align: center;
+      opacity: 0;
+      transition: 0.5s ease;
+
+      li {
+        @include flex(space-evenly, center, column);
+      }
+    }
+    ul.show {
+      opacity: 1;
+    }
+
+    .login-btn {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+
+  .intro-header {
+    flex-direction: column-reverse;
+    padding: 2rem 2rem;
+
+    br {
+      display: none;
+    }
+
+    .intro-text {
+      margin-top: 2rem;
+      h2 {
+        font-size: 4rem;
+      }
+
+      .connect {
+        @include flex(unset, center, row);
+
+        .connect-btn {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .social-network {
+    padding: 2rem 2rem;
+    img:nth-of-type(4) {
+      display: none;
+    }
+    img:nth-of-type(5) {
+      display: none;
+    }
+    img:nth-of-type(6) {
+      display: none;
+    }
+    img:nth-of-type(7) {
+      display: none;
+    }
+    img:nth-of-type(8) {
+      display: none;
+    }
+  }
+
+  .money-section {
+    padding: 0 2rem;
+    br {
+      display: none;
+    }
+
+    .money-container {
+      align-items: flex-start;
+      padding-top: 5rem;
+      background-size: contain;
+      background-position: bottom;
+      background-position-x: -80px;
+      flex-direction: column;
+      overflow: hidden;
+    }
+  }
+
+  .text-editor-section {
+    padding: 2rem 2rem;
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+
+  .footer-container {
+    padding: 5rem 2rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    br {
+      display: none;
+    }
+
+    .footer-links {
+      flex-wrap: wrap-reverse;
+
+      .opportunities {
+        position: relative;
+        right: -200px;
+        top: 15px;
+      }
+
+      .company {
+        position: relative;
+        top: -50px;
+      }
+
+      .sitemap {
+        position: relative;
+        top: -100px;
+      }
+
+      .resources {
+        position: relative;
+        top: -35px;
+        right: -110px;
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .social-network {
+    img:nth-of-type(4) {
+      display: block;
+    }
+    img:nth-of-type(5) {
+      display: block;
+    }
+  }
+
+  .footer-container {
+    overflow: hidden;
+    height: 50vh;
+    br {
+      display: block;
+    }
+
+    .footer-logo {
+      align-self: baseline;
+    }
+
+    .footer-links {
+      .sitemap {
+        top: -160px;
+        left: 50px;
+      }
+      .company {
+        top: 50px;
+        left: -530px;
+      }
+      .resources {
+        top: -95px;
+        right: -150px;
+      }
+      .opportunities {
+        left: -450px;
+        top: -15px;
+      }
+    }
+  }
+}

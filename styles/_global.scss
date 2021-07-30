@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$black-color: hsl(0, 0%, 0%);
+$white-color: hsl(0, 0%, 100%);
+$bg-color: hsl(36, 14%, 93%);
+$title-color: hsl(0, 0%, 16%);
+$text-color: hsl(40, 11%, 37%);
+$text-bold-color: hsl(44, 14%, 31%);
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-family: "Cabin", sans-serif;
+  font-size: 1.8rem;
+  overflow-x: hidden;
+}
